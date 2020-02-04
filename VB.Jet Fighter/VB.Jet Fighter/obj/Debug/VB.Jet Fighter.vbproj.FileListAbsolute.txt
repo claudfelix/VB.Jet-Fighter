@@ -1,0 +1,11 @@
+C:\Users\claud\source\repos\VB.Jet Fighter\VB.Jet Fighter\bin\Debug\VB.Jet Fighter.exe.config
+C:\Users\claud\source\repos\VB.Jet Fighter\VB.Jet Fighter\bin\Debug\VB.Jet Fighter.exe
+C:\Users\claud\source\repos\VB.Jet Fighter\VB.Jet Fighter\bin\Debug\VB.Jet Fighter.pdb
+C:\Users\claud\source\repos\VB.Jet Fighter\VB.Jet Fighter\bin\Debug\VB.Jet Fighter.xml
+C:\Users\claud\source\repos\VB.Jet Fighter\VB.Jet Fighter\obj\Debug\VB.Jet Fighter.vbprojAssemblyReference.cache
+C:\Users\claud\source\repos\VB.Jet Fighter\VB.Jet Fighter\obj\Debug\VB.Jet_Fighter.Form1.resources
+C:\Users\claud\source\repos\VB.Jet Fighter\VB.Jet Fighter\obj\Debug\VB.Jet_Fighter.Resources.resources
+C:\Users\claud\source\repos\VB.Jet Fighter\VB.Jet Fighter\obj\Debug\VB.Jet Fighter.vbproj.GenerateResource.cache
+C:\Users\claud\source\repos\VB.Jet Fighter\VB.Jet Fighter\obj\Debug\VB.Jet Fighter.exe
+C:\Users\claud\source\repos\VB.Jet Fighter\VB.Jet Fighter\obj\Debug\VB.Jet Fighter.xml
+C:\Users\claud\source\repos\VB.Jet Fighter\VB.Jet Fighter\obj\Debug\VB.Jet Fighter.pdb
