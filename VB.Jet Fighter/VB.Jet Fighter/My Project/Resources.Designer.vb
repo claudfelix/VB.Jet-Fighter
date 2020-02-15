@@ -63,9 +63,9 @@ Namespace My.Resources
         '''<summary>
         '''  Looks up a localized resource of type System.Drawing.Bitmap.
         '''</summary>
-        Friend ReadOnly Property image_20161110_21844_w84scr__2_() As System.Drawing.Bitmap
+        Friend ReadOnly Property background() As System.Drawing.Bitmap
             Get
-                Dim obj As Object = ResourceManager.GetObject("image-20161110-21844-w84scr (2)", resourceCulture)
+                Dim obj As Object = ResourceManager.GetObject("background", resourceCulture)
                 Return CType(obj,System.Drawing.Bitmap)
             End Get
         End Property
@@ -76,6 +76,36 @@ Namespace My.Resources
         Friend ReadOnly Property jet() As System.Drawing.Bitmap
             Get
                 Dim obj As Object = ResourceManager.GetObject("jet", resourceCulture)
+                Return CType(obj,System.Drawing.Bitmap)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized resource of type System.Drawing.Bitmap.
+        '''</summary>
+        Friend ReadOnly Property missile() As System.Drawing.Bitmap
+            Get
+                Dim obj As Object = ResourceManager.GetObject("missile", resourceCulture)
+                Return CType(obj,System.Drawing.Bitmap)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized resource of type System.Drawing.Bitmap.
+        '''</summary>
+        Friend ReadOnly Property missile2() As System.Drawing.Bitmap
+            Get
+                Dim obj As Object = ResourceManager.GetObject("missile2", resourceCulture)
+                Return CType(obj,System.Drawing.Bitmap)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized resource of type System.Drawing.Bitmap.
+        '''</summary>
+        Friend ReadOnly Property missile3() As System.Drawing.Bitmap
+            Get
+                Dim obj As Object = ResourceManager.GetObject("missile3", resourceCulture)
                 Return CType(obj,System.Drawing.Bitmap)
             End Get
         End Property

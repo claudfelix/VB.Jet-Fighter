@@ -22,12 +22,27 @@ VB.Jet Fighter
   resource lookups using this strongly typed resource class.
 </summary>
 </member>
-<member name="P:VB.Jet_Fighter.My.Resources.Resources.image_20161110_21844_w84scr__2_">
+<member name="P:VB.Jet_Fighter.My.Resources.Resources.background">
 <summary>
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
 </member>
 <member name="P:VB.Jet_Fighter.My.Resources.Resources.jet">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:VB.Jet_Fighter.My.Resources.Resources.missile">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:VB.Jet_Fighter.My.Resources.Resources.missile2">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:VB.Jet_Fighter.My.Resources.Resources.missile3">
 <summary>
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>

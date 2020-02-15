@@ -35,14 +35,13 @@ Partial Class Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(9.0!, 20.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.BackgroundImage = Global.VB.Jet_Fighter.My.Resources.Resources.image_20161110_21844_w84scr__2_
-        Me.ClientSize = New System.Drawing.Size(978, 944)
+        Me.AutoValidate = System.Windows.Forms.AutoValidate.EnablePreventFocusChange
+        Me.BackColor = System.Drawing.SystemColors.Control
+        Me.ClientSize = New System.Drawing.Size(1078, 1044)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.MaximizeBox = False
-        Me.MaximumSize = New System.Drawing.Size(1000, 1000)
         Me.MinimizeBox = False
-        Me.MinimumSize = New System.Drawing.Size(1000, 1000)
         Me.Name = "Form1"
         Me.Text = "VB.Jet Fighter"
         Me.ResumeLayout(False)
