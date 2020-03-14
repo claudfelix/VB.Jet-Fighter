@@ -1,5 +1,5 @@
 ﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
-Partial Class Form1
+Partial Class Form3
     Inherits System.Windows.Forms.Form
 
     'Form overrides dispose to clean up the component list.
@@ -25,8 +25,8 @@ Partial Class Form1
         Me.components = New System.ComponentModel.Container()
         Me.Timer1 = New System.Windows.Forms.Timer(Me.components)
         Me.enemyTimer = New System.Windows.Forms.Timer(Me.components)
-        Me.scoreLabel = New System.Windows.Forms.Label()
         Me.scoreTimer = New System.Windows.Forms.Timer(Me.components)
+        Me.scoreLabel = New System.Windows.Forms.Label()
         Me.SuspendLayout()
         '
         'Timer1
@@ -37,6 +37,10 @@ Partial Class Form1
         '
         Me.enemyTimer.Interval = 200
         '
+        'scoreTimer
+        '
+        Me.scoreTimer.Interval = 1000
+        '
         'scoreLabel
         '
         Me.scoreLabel.BackColor = System.Drawing.Color.Black
@@ -45,23 +49,19 @@ Partial Class Form1
         Me.scoreLabel.Location = New System.Drawing.Point(900, 9)
         Me.scoreLabel.Name = "scoreLabel"
         Me.scoreLabel.Size = New System.Drawing.Size(166, 37)
-        Me.scoreLabel.TabIndex = 0
+        Me.scoreLabel.TabIndex = 1
         Me.scoreLabel.Text = "Score:"
         '
-        'scoreTimer
-        '
-        Me.scoreTimer.Interval = 1000
-        '
-        'Form1
+        'Form3
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(9.0!, 20.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.AutoValidate = System.Windows.Forms.AutoValidate.EnablePreventFocusChange
         Me.BackColor = System.Drawing.Color.Black
         Me.ClientSize = New System.Drawing.Size(1078, 1044)
         Me.Controls.Add(Me.scoreLabel)
+        Me.ForeColor = System.Drawing.SystemColors.ControlText
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog
-        Me.Name = "Form1"
+        Me.Name = "Form3"
         Me.Text = "VB.Jet Fighter"
         Me.ResumeLayout(False)
 
@@ -69,6 +69,6 @@ Partial Class Form1
 
     Friend WithEvents Timer1 As Timer
     Friend WithEvents enemyTimer As Timer
-    Friend WithEvents scoreLabel As Label
     Friend WithEvents scoreTimer As Timer
+    Friend WithEvents scoreLabel As Label
 End Class

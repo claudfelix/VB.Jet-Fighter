@@ -1,16 +1,25 @@
-﻿Public Class Form1
+﻿Public Class Form3
     Dim ship As New PictureBox
+    Dim ship2 As New PictureBox
     Dim moveRight As Boolean = False
     Dim moveTop As Boolean = False
     Dim moveLeft As Boolean = False
     Dim moveDown As Boolean = False
-    Dim maxMissileNumber As Integer = 5
+
+    Dim moveRight2 As Boolean = False
+    Dim moveTop2 As Boolean = False
+    Dim moveLeft2 As Boolean = False
+    Dim moveDown2 As Boolean = False
+
+    Dim maxMissileNumber As Integer = 8
     Dim missileArray(maxMissileNumber) As PictureBox
     Dim missileNumber As Integer = 0
     Dim missileOnScreen(maxMissileNumber) As Boolean
     Dim maxEnemyNumber As Integer = 7
     Dim enemyArray(maxEnemyNumber) As PictureBox
     Dim enemyOnScreen(maxEnemyNumber) As Boolean
+
+
     Dim score As Integer = 0
     Dim enemySpeed As Single = 1
 
@@ -22,7 +31,17 @@
         ship.BorderStyle = BorderStyle.None
         ship.Image = BackgroundImage.FromFile("C:\Users\claud\source\repos\VB.Jet Fighter\VB.Jet Fighter\Resources\jet2.png")
         ship.Top = Me.Height - 1.4 * ship.Height
-        ship.Left = Me.Width / 1.8 - ship.Width
+        ship.Left = Me.Width / 2.0 - ship.Width
+
+        Me.Controls.Add(ship2)
+        ship2.Width = 100
+        ship2.Height = 100
+        ship2.BackColor = Color.Transparent
+        ship2.BorderStyle = BorderStyle.None
+        ship2.Image = BackgroundImage.FromFile("C:\Users\claud\source\repos\VB.Jet Fighter\VB.Jet Fighter\Resources\jet2.png")
+        ship2.Top = Me.Height - 1.4 * ship2.Height
+        ship2.Left = Me.Width / 1.6 - ship2.Width
+
         CreateMissiles(maxMissileNumber)
         CreateEnemies(maxEnemyNumber)
         Timer1.Start()
@@ -46,6 +65,19 @@
         End If
         If moveTop = True Then
             ship.Top -= 7
+        End If
+
+        If moveRight2 = True And (ship2.Left < Me.Width - 100) Then
+            ship2.Left += 7
+        End If
+        If moveLeft2 = True And (ship2.Left > -10) Then
+            ship2.Left -= 7
+        End If
+        If moveDown2 = True Then
+            ship2.Top += 7
+        End If
+        If moveTop2 = True Then
+            ship2.Top -= 7
         End If
 
         For i = 0 To maxMissileNumber
@@ -80,7 +112,7 @@
                 moveDown = True
             Case Keys.A
                 moveLeft = True
-            Case Keys.Space
+            Case Keys.V
                 For i = 0 To maxMissileNumber
                     If missileOnScreen(i) = True Then
                         count = count + 1
@@ -93,6 +125,38 @@
                     missileArray(missileNumber).Visible = True
                     missileArray(missileNumber).Top = ship.Top + ship.Height / 2 - missileArray(missileNumber).Height / 2
                     missileArray(missileNumber).Left = ship.Left + ship.Width / 2 - missileArray(missileNumber).Width / 2
+                    missileNumber += 1
+                    If missileNumber = maxMissileNumber Then missileNumber = 0
+                End If
+        End Select
+    End Sub
+
+    Private Sub Form1_KeyDown2(sender As Object, e As KeyEventArgs) Handles Me.KeyDown
+        Dim i As Integer = 0
+        Dim count As Integer = 1
+
+        Select Case e.KeyValue
+            Case Keys.Right
+                moveRight2 = True
+            Case Keys.Up
+                moveTop2 = True
+            Case Keys.Down
+                moveDown2 = True
+            Case Keys.Left
+                moveLeft2 = True
+            Case Keys.M
+                For i = 0 To maxMissileNumber
+                    If missileOnScreen(i) = True Then
+                        count = count + 1
+                    End If
+                Next
+
+
+                If count <= maxMissileNumber Then
+                    missileOnScreen(missileNumber) = True
+                    missileArray(missileNumber).Visible = True
+                    missileArray(missileNumber).Top = ship2.Top + ship2.Height / 2 - missileArray(missileNumber).Height / 2
+                    missileArray(missileNumber).Left = ship2.Left + ship2.Width / 2 - missileArray(missileNumber).Width / 2
                     missileNumber += 1
                     If missileNumber = maxMissileNumber Then missileNumber = 0
                 End If
@@ -112,6 +176,19 @@
         End Select
     End Sub
 
+    Private Sub Form1_KeyUp2(sender As Object, e As KeyEventArgs) Handles Me.KeyUp
+        Select Case e.KeyValue
+            Case Keys.Right
+                moveRight2 = False
+            Case Keys.Up
+                moveTop2 = False
+            Case Keys.Down
+                moveDown2 = False
+            Case Keys.Left
+                moveLeft2 = False
+        End Select
+    End Sub
+
     Private Sub CreateMissiles(ByVal Number As Integer)
         Dim i As Integer = 0
         For i = 0 To Number
@@ -124,6 +201,10 @@
             missile.Image = BackgroundImage.FromFile("C:\Users\claud\source\repos\VB.Jet Fighter\VB.Jet Fighter\Resources\missile2.png")
             missile.Top = ship.Top + ship.Height / 2 - missile.Height / 2
             missile.Left = ship.Left + ship.Width / 2 - missile.Width / 2
+
+            missile.Top = ship2.Top + ship2.Height / 2 - missile.Height / 2
+            missile.Left = ship2.Left + ship2.Width / 2 - missile.Width / 2
+
             missile.SendToBack()
             missileArray(i) = missile
             missileArray(i).Visible = False
