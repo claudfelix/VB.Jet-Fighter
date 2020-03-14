@@ -134,5 +134,14 @@
   <ItemGroup>
     <None Include="Resources\missile3.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\unnamed.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\background.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\jet2.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
 </Project>
